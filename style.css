@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap');
+
 body {
     background-color: #0F2546;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
 }
 
 /* background to 50% opacity*/
@@ -17,14 +22,77 @@ body::before {
     z-index: -1;
 }
 
+/*start of headings*/
+header {
+    background-color: #081425;
+    opacity: 80%;
+    padding: 0px 5px;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Mulish";
+    height: 8vh;
+    border-bottom: 3px solid #cccccc;
+}
+
+
+
+.nav-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 40px
+}
+
+.nav-links ul li a {
+    color: white;
+    font-size: 1vw;
+    text-decoration: none;
+    display: block;
+    padding: 10px 15px;
+    margin-right: 40px;
+}
+
+.mulish-nav {
+    font-family: "Mulish", sans-serif;
+}
+
+
 @font-face {
     font-family: "ja-med";
     src: url("https://cdn.jsdelivr.net/gh/codetheworld-io/static-files/ja-med.otf");
-
 }
 
+/* Hamburger menu styling */
+.hamburger-menu {
+    display: flex; /* Ensures alignment with flexbox */
+    align-items: center;
+    margin-left: auto; /* Push the hamburger menu to the far right */
+    margin-right: 20px;
+}
+
+.hamburger-menu img {
+    display: none; /* Hidden by default (for larger screens) */
+    cursor: pointer; /* Make it clickable */
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide navigation links */
+    }
+
+    .hamburger-menu img {
+        display: block; /* Show hamburger icon */
+    }
+}
+/*heading end*/
+
 .center {
-    height: 800px;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,7 +101,8 @@ body::before {
 .container {
     position: relative;
     width: 80%;
-    height: 500px;
+    margin-top: 0px;
+    height: 55%;
     display: grid;
     font-family: "ja-med",sans-serif;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -52,7 +121,6 @@ body::before {
     justify-content: center;
     border: 1px solid #cccccc;
     border-radius: 5px;
-    top: 100px
 }
 
 
