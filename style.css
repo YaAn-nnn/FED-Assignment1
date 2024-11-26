@@ -15,7 +15,7 @@ body.page2 {
 }
 
 /* background to 50% opacity*/
-body::before {
+body.page1::before {
     content: '';
     position: absolute;
     top: 0;
@@ -23,6 +23,34 @@ body::before {
     width: 100%;
     height: 100%;
     background-image: url("Images/map.webp");
+    background-position: center;
+    background-size: cover;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+body.page2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("Images/map.webp");
+    background-position: center;
+    background-size: cover;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+body.page3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("Images/wanwan.jpg");
     background-position: center;
     background-size: cover;
     opacity: 0.5;
@@ -40,7 +68,7 @@ header {
     align-items: center;
     font-family: "Mulish";
     height: 8vh;
-    border-bottom: 3px solid #cccccc;
+    border-bottom: 3px solid #fff;
 }
 
 
@@ -56,7 +84,7 @@ header {
 }
 
 .nav-links ul li a {
-    color: white;
+    color: #fff;
     font-size: 1vw;
     text-decoration: none;
     display: block;
@@ -100,12 +128,12 @@ header {
 
 .title {
     background-color: rgba(8, 20, 39, 0.7);
-    color: #E1D9D1;
+    color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 12vh;
-    border: 2px solid #cccccc;
+    border: 2px solid #fff;
     font-family: "Jim Nightshade"; 
     border-radius: 10px;
     margin: auto;
@@ -167,7 +195,7 @@ header {
     transition: all 400ms;
     display: flex;
     justify-content: center;
-    border: 1px solid #cccccc;
+    border: 1px solid #fff;
     border-radius: 5px;
     height: 100%
 }
@@ -224,17 +252,17 @@ header {
 
 /*text style*/
 .box::after{
-        content:attr(data-text);
-        position: absolute;
-        font-size: 1.5vw;
-        color: #fff;
-        background: rgba(0, 0, 0, 70%);
-        bottom: 20px;
-        padding: 10px 10px 10px 14px;
-        letter-spacing: 4px;
-        transition: all 400ms;
-        transform: translateY(60px);
-        opacity: 0;
+    content:attr(data-text);
+    position: absolute;
+    font-size: 1.5vw;
+    color: #fff;
+    background: rgba(0, 0, 0, 70%);
+    bottom: 20px;
+    padding: 10px 10px 10px 14px;
+    letter-spacing: 4px;
+    transition: all 400ms;
+    transform: translateY(60px);
+    opacity: 0;
 }
 
 /*appearing text when hover*/
@@ -248,14 +276,14 @@ header {
 /*page2*/
 
 .tier-list {
-    margin: 30px auto; /*margin top and bot 30px while centralise the table*/
-    height: auto;
+    margin: 3vh auto; /*margin top and bot 30px while centralise the table*/
     width: 70vw;
-    background-color: rgba(26, 26, 23, 0.8); /* Transparent black for the main container */
+    background-color: rgba(26, 26, 23, 0.8);
     border: 3px solid #000;
     display: flex;
     flex-direction: column;
-
+    overflow-y: auto;
+    height: 64.5vh;
 }
 
 /* Tier Row Styling */
@@ -320,4 +348,73 @@ header {
 .hero-icons img:hover {
     transform: scale(1.1); /* Slight zoom effect */
     border: 2px solid white;
+}
+
+/*page3*/
+.back-button {
+    position: absolute; /* Positions the button relative to the parent container */
+    top: 8.5vh; /* Positions it below the header */
+    margin: 5vh 3vw;
+    font-family: "Mulish";
+    font-size: 1vw; /* Small font size */
+    background-color: rgba(8, 20, 37, 0.8);
+    border: 2px solid #fff; /* Border for the button */
+    border-radius: 5px; /* Rounded corners */
+    padding: 1vh 1vw; /* Adds padding inside the button */
+}
+
+.back-button a {
+    text-decoration: none; /* Removes underline */
+    color: #fff; /* Text color */
+}
+
+@media (max-width: 768px) /*prevent button from getting too small when in vertical/mobile mode*/
+{
+    .back-button{
+        font-size: 2vw;
+    }
+}
+
+/* Container for the vertical boxes */
+.skill-box-container {
+    display: flex;
+    gap: 20px; /* Space between each skill box */
+    margin: 0 auto; /* Center the container horizontally */
+    flex-direction: row;
+    margin-top: 5vh;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-y: auto;
+    height: 68vh;
+}
+
+/* Individual skill box */
+.skill-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Align image and text vertically */
+    background-color: rgba(15, 37, 70, 0.8); /* Box background color */
+    padding: 20px;
+    border: 2px solid #fff; /* Optional border */
+    border-radius: 10px; /* Rounded corners */
+    gap: 15px; /* Space between image and text */
+    width: 260px;
+    height: fit-content;
+}
+
+/* Skill description */
+.skill-description h3 {
+    font-size: 1.2rem;
+    text-align: center;
+    font-family: "Mulish";
+    color: #fff;
+    margin: 0 0 5px;
+}
+
+.skill-description p {
+    font-size: 1rem;
+    text-align: justify;
+    font-family: "Mulish";
+    color: #ccc;
+    margin: 0;
 }
