@@ -211,11 +211,7 @@ header {
     display: none; /* Hidden by default */
 }
 
-
-
-
-/*heading end*/
-
+/*title style*/
 .title {
     background-color: rgba(8, 20, 39, 0.7);
     color: #fff;
@@ -251,7 +247,7 @@ header {
 }
 
 
-/*page1*/
+/*page1 index*/
 
 .center {
     height: 100%;
@@ -263,7 +259,7 @@ header {
 .container {
     position: relative;
     width: 80%;
-    height: 60%;
+    height: 65%;
     display: grid;
     font-family: "ja-med",sans-serif;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -363,7 +359,7 @@ header {
 }
 
 
-/*page2*/
+/*page2 tierlist*/
 
 .tier-list {
     margin: 3vh auto; /*margin top and bot 30px while centralise the table*/
@@ -440,7 +436,7 @@ header {
     border: 2px solid white;
 }
 
-/*page3*/
+/*back button for both page2 and page3*/
 .back-button {
     position: absolute; /* Positions the button relative to the parent container */
     top: 8.5vh; /* Positions it below the header */
@@ -458,12 +454,18 @@ header {
     color: #fff; /* Text color */
 }
 
+.back-button:hover {
+    background-color: #444;
+}
+
 @media (max-width: 768px) /*prevent button from getting too small when in vertical/mobile mode*/
 {
     .back-button{
         font-size: 2vw;
     }
 }
+
+/*page3 heroskills*/
 
 /* Container for the vertical boxes */
 .skill-box-container {
