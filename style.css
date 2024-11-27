@@ -372,6 +372,10 @@ header {
     height: 64.5vh;
 }
 
+.tier-list::-webkit-scrollbar {
+    display: none; /*hide scroll bar*/
+}
+
 /* Tier Row Styling */
 .s-tier, .aPlus-tier, .a-tier, .b-tier, .c-tier {
     display: flex;
@@ -478,6 +482,10 @@ header {
     justify-content: center;
     overflow-y: auto;
     height: 68vh;
+}
+
+.skill-box-container::-webkit-scrollbar {
+    display: none; /*hide scroll bar*/
 }
 
 /* Individual skill box */
