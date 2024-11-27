@@ -46,3 +46,4 @@ This website is primarily catered to gaming enthusiasts, particularly players of
 
 ### Acknowledgements:
 - Inspirations were from https://www.tiktok.com/@qwerty_webdev/video/7128453986146962714
+- Used some help from AI, https://chatgpt.com/
