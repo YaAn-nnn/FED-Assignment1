@@ -8,15 +8,15 @@ Throughout this website, users can recognise which herores are strong in the cur
 This website is primarily catered to gaming enthusiasts, particularly players of the game "Mobile Legends". The primary goal is to provide users with an interactive way to learn more about the heroes.
 
 ### Target Audience:
-1. Mobile Legends players who want to learn more about heroes they have never played.
-2. Mobile Legends players who are interested in a more competitive gameplay and want to know which heroes are strong in the current patch.
-3. People who wants to start playing the game but don't know which hero to start playing from.
+- Mobile Legends players who want to learn more about heroes they have never played.
+- Mobile Legends players who are interested in a more competitive gameplay and want to know which heroes are strong in the current patch.
+- People who wants to start playing the game but don't know which hero to start playing from.
 
 ### Purpose:
-1. To create a visually appealing and user-friendly interface to attract players to view it.
-2. To allow players to learn more about a hero they are interested in.
-3. To allow players to learn about the heroes that are strong in the current patch.
-4. To attract current or new players to try and continue the game.
+- To create a visually appealing and user-friendly interface to attract players to view it.
+- To allow players to learn more about a hero they are interested in.
+- To allow players to learn about the heroes that are strong in the current patch.
+- To attract current or new players to try and continue the game.
 
 ## Features:
 - Index page has a hover effect, where users can hover over a hero to focus and enlarge it in width to show more of the hero design while the name of the hero will appear.
