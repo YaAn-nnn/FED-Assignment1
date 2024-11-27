@@ -70,6 +70,8 @@ header {
     font-family: "Mulish";
     height: 8vh;
     border-bottom: 3px solid #fff;
+    position: relative;
+    z-index: 2;
 }
 
 .logo {
@@ -138,13 +140,12 @@ header {
         height: 100vh;
         width: 0; /*hide sidebar before clicking*/
         position: fixed;
-        z-index: 2;
         top: 0;
         right: 0; /* Sidebar appears from the right */
         background-color: #FFFFF0 ;
         overflow-x: hidden;
         transition: 0.5s; /* Smooth slide effect */
-        padding-top: 5vh;
+        padding-top: 8vh;
     }
 
     /* Close button inside the sidebar */
@@ -247,7 +248,7 @@ header {
     display: flex;
     justify-content: center;
     margin-top: 5vh;
-    position: sticky;
+    position: relative;
     z-index: 1;
 }
 
