@@ -4,6 +4,7 @@ body {
     background-color: #0F2546;
     height: 100vh;
     margin: 0;
+    position: relative;
 }
 
 body.page1 {
@@ -71,7 +72,16 @@ header {
     border-bottom: 3px solid #fff;
 }
 
+.logo {
+    margin-right: 4vw;
+}
 
+.nav-links {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center; 
+}
 
 .nav-links ul {
     list-style: none;
@@ -80,7 +90,7 @@ header {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin-left: 4vw
+    margin-right: 30vw;
 }
 
 .nav-links ul li a {
@@ -89,7 +99,6 @@ header {
     text-decoration: none;
     display: block;
     padding: 10px 15px;
-    margin-right: 5vw;
 }
 
 .mulish-nav {
@@ -102,28 +111,98 @@ header {
     src: url("https://cdn.jsdelivr.net/gh/codetheworld-io/static-files/ja-med.otf");
 }
 
+
 /* Hamburger menu styling */
 .hamburger-menu {
-    display: flex; /* Ensures alignment with flexbox */
-    align-items: center;
-    margin-left: auto; /* Push the hamburger menu to the far right */
-    margin-right: 20px;
-}
-
-.hamburger-menu img {
-    display: none; /* Hidden by default (for larger screens) */
-    cursor: pointer; /* Make it clickable */
+    display: none; /* Default: hidden */
 }
 
 @media (max-width: 768px) {
+    /* Hide navigation links on mobile */
     .nav-links {
-        display: none; /* Hide navigation links */
+        display: none;
     }
 
-    .hamburger-menu img {
-        display: block; /* Show hamburger icon */
+    /* Show hamburger menu on mobile */
+    .hamburger-menu {
+        font-family: "Mulish";
+        display: block;
+        position: absolute;
+        top: 1vh;
+        right: 20px;
+        cursor: pointer;
     }
+
+    /* Sidebar styling */
+    .sidebar {
+        height: 100vh;
+        width: 0; /*hide sidebar before clicking*/
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        right: 0; /* Sidebar appears from the right */
+        background-color: #FFFFF0 ;
+        overflow-x: hidden;
+        transition: 0.5s; /* Smooth slide effect */
+        padding-top: 5vh;
+    }
+
+    /* Close button inside the sidebar */
+    .closebtn {
+        font-size: 20px;
+        cursor: pointer;    
+        background-color: rgba(8, 20, 39, 0.7);
+        color: #f1f1f1;
+        padding: 10px;
+        border: none;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        border-radius: 10px;
+    }
+
+    .openbtn {
+        font-size: 20px;
+        cursor: pointer;
+        background-color: rgba(8, 20, 39, 0.7);
+        color: #fff;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 10px;
+        visibility: visible;
+        align-items: center;
+    }
+
+    /* Sidebar links */
+    .sidebar a {
+        padding: 8px;
+        text-decoration: none;
+        font-size: 1.2rem;
+        color: #000;
+        display: block;
+        transition: 0.3s;
+        
+    }
+
+    .sidebar a:hover {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: red;
+        background-color: #444;
+        margin: 0px 15px 15px 15px;
+        border-radius: 8px;
+    }
+
+    .openbtn:hover {
+        background-color: #444;
+    }
+
+    .closebtn:hover {
+        background-color: #444;
+    }
+
 }
+
 /*heading end*/
 
 .title {
@@ -168,6 +247,8 @@ header {
     display: flex;
     justify-content: center;
     margin-top: 5vh;
+    position: sticky;
+    z-index: 1;
 }
 
 .container {
@@ -197,7 +278,7 @@ header {
     justify-content: center;
     border: 1px solid #fff;
     border-radius: 5px;
-    height: 100%
+    height: 100%;
 }
 
 
