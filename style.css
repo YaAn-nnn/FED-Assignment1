@@ -56,6 +56,20 @@ body.page3::before {
     z-index: -1;
 }
 
+body.page4::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("Images/map.webp");
+    background-position: center;
+    background-size: cover;
+    opacity: 0.5;
+    z-index: -1;
+}
+
 /*start of headings*/
 header {
     background-color: #081425;
@@ -236,6 +250,10 @@ header {
 }
 
 .page3 .title {
+    width: 28%;
+}
+
+.page4 .title {
     width: 28%;
 }
 
@@ -517,4 +535,37 @@ header {
     font-family: "Mulish";
     color: #ccc;
     margin: 0;
+}
+
+/*page 4 about page*/
+.content {
+    background-color: rgba(15, 25, 42, 0.9);
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 800px; /* Limit content width */
+    font-family: "Mulish";
+}
+
+/* Heading style */
+.content h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+/* Paragraph style */
+.content p {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.content ul {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 15px;
 }
