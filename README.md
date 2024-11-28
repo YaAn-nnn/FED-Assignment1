@@ -33,12 +33,15 @@ This website is primarily catered to gaming enthusiasts, particularly players of
 ### Content:
 - This entire website is based on a game Mobile Legends: Bang Bang.
 - Navigation links on the header lead to different parts of its official website, https://m.mobilelegends.com/
+- Tier List was made with the same design concept from https://tiermaker.com/
 - Hovering effects for index page was copied partially from https://www.tiktok.com/@codetheworld.io/video/7426273438731455762?is_from_webapp=1&sender_device=pc&web_id=7368689541111121424
 - Sidebar was copied partially from https://www.tiktok.com/@.codemonkey/photo/7401373725603532040?is_from_webapp=1&sender_device=pc&web_id=7368689541111121424
 
 ### Media:
 - Favicon was obtained from https://m.mobilelegends.com/
 - MLBB Logo on the header was obtained from https://www.freepnglogos.com/pics/logo-mobile-legend
+- MLBB Map was obtained from https://mobile-legends.fandom.com/wiki/Battlefield_Guide
+- MLBB Wanwan wallpaper was obtained from https://www.uhdpaper.com/2019/10/wanwan-mobile-legends-4k-7351.html#google_vignette
 - Icons for each hero were obtained from https://mobile-legends.fandom.com/wiki/List_of_heroes
 - Images for Ling and Kagura on the index page were obtained from https://www.uhdpaper.com/
 - Images for Lesley, Estes and Ruby on the index page were obtained from https://www.deviantart.com/
