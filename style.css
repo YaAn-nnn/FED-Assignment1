@@ -1,73 +1,43 @@
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap');@import url('https://fonts.googleapis.com/css2?family=Jim+Nightshade&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jim+Nightshade&display=swap');
 
 body {
     background-color: #0F2546;
     height: 100vh;
-    margin: 0;
-    position: relative;
+    margin: 0; /* Remove default margins */
 }
 
 body.page1 {
-    overflow: hidden;
+    overflow: hidden; /*prevent scrolling*/
 }
 
 
+/* Add a semi-transparent background image for different pages */
+body.page1::before, body.page2::before, body.page3::before, body.page4::before {
+    content: ''; /* Necessary for pseudo-elements */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Full-width */
+    height: 100%; /* Full-height */
+    background-position: center; /* Center the image */
+    background-size: cover; /* Cover entire background */
+    opacity: 0.5; /* Reduce image visibility */
+    z-index: -1; /* Push behind all content */
+}
 
-/* background to 50% opacity*/
+/* Page-specific background images */
 body.page1::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     background-image: url("Images/map.webp");
-    background-position: center;
-    background-size: cover;
-    opacity: 0.5;
-    z-index: -1;
 }
-
 body.page2::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     background-image: url("Images/map.webp");
-    background-position: center;
-    background-size: cover;
-    opacity: 0.5;
-    z-index: -1;
 }
-
 body.page3::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     background-image: url("Images/wanwan.jpg");
-    background-position: center;
-    background-size: cover;
-    opacity: 0.5;
-    z-index: -1;
 }
-
 body.page4::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     background-image: url("Images/map.webp");
-    background-position: center;
-    background-size: cover;
-    opacity: 0.5;
-    z-index: -1;
 }
 
 /*start of headings*/
@@ -75,10 +45,8 @@ header {
     background-color: #081425;
     opacity: 80%;
     padding: 0px 5px;
-    margin: 0;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    align-items: center; /* Vertically align items */
     font-family: "Mulish";
     height: 8vh;
     border-bottom: 3px solid #fff;
@@ -92,15 +60,13 @@ header {
 
 .nav-links {
     display: flex;
-    flex: 1;
-    justify-content: space-between;
+    flex: 1; /* Take remaining space */
     align-items: center; 
 }
 
 .nav-links ul {
-    list-style: none;
+    list-style: none; /* Remove bullet points */
     margin: 0;
-    padding: 0;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -110,41 +76,26 @@ header {
 .nav-links ul li a {
     color: #fff;
     font-size: 1vw;
-    text-decoration: none;
-    display: block;
-    padding: 10px 15px;
+    text-decoration: none; /* Remove underline */
+    font-family: "Mulish"
 }
-
-.mulish-nav {
-    font-family: "Mulish", sans-serif;
-}
-
-
-@font-face {
-    font-family: "ja-med";
-    src: url("https://cdn.jsdelivr.net/gh/codetheworld-io/static-files/ja-med.otf");
-}
-
 
 /* Hamburger menu styling */
 .hamburger-menu {
-    display: none; /* Default: hidden */
+    display: none; /* hide hamburger menu on desktop */
 }
 
 @media (max-width: 768px) {
-    /* Hide navigation links on mobile */
     .nav-links {
-        display: none;
+        display: none; /* Hide navigation links on mobile */
     }
 
-    /* Show hamburger menu on mobile */
     .hamburger-menu {
         font-family: "Mulish";
-        display: block;
+        display: block; /* Show hamburger menu on mobile */
         position: absolute;
         top: 1vh;
         right: 20px;
-        cursor: pointer;
     }
 
     /* Sidebar styling */
@@ -164,18 +115,19 @@ header {
     /* Close button inside the sidebar */
     .closebtn {
         font-size: 2vw;
-        cursor: pointer;    
+        cursor: pointer;
         background-color: #121212;
         color: #fff;
         padding: 10px;
         border: none;
-        position: absolute;
+        position: absolute; /*button on top right*/
         top: 10px;
         right: 20px;
         border-radius: 10px;
         font-weight: bold;
     }
 
+    /* Open button (hamburger icon)*/
     .openbtn {
         font-size: 20px;
         cursor: pointer;
@@ -194,10 +146,11 @@ header {
         text-decoration: none;
         font-size: 2vw;
         color: #fff;
-        display: block;
+        display: block; /*align links vertically*/
         transition: 0.3s;
     }
 
+    /*hover effects to show that it's clickable*/
     .sidebar a:hover {
         font-size: 2.5vw;
         background-color: #444;
@@ -230,42 +183,35 @@ header {
     background-color: rgba(8, 20, 39, 0.7);
     color: #fff;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center; /* Vertically centers word */
+    justify-content: center; /* Horizontally centers word */
     height: 12vh;
     border: 2px solid #fff;
     font-family: "Jim Nightshade"; 
     border-radius: 10px;
-    margin: auto;
-    margin-top: 3vh;
-    padding-top: 1%;
+    margin: auto; /*Horizontally center title box*/
+    margin-top: 3vh; /* Adds spacing above the title */
+    padding-top: 1%; /* Adds padding to the top */
 }
 
-.page1 .title {
-    width: 45%;
-}
+/* Title width for each page */
+.page1 .title { width: 45%; }
+.page2 .title { width: 30%; }
+.page3 .title { width: 28%; }
+.page4 .title { width: 28%; }
 
-.page2 .title {
-    width: 30%;
-}
-
-.page3 .title {
-    width: 28%;
-}
-
-.page4 .title {
-    width: 28%;
-}
-
+/* Title text styling */
 .title h1 {
     font-size: 5vw;
     font-weight: 100;
-    margin: 0;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 }
 
-
 /*page1 index*/
+@font-face {
+    font-family: "ja-med";
+    src: url("https://cdn.jsdelivr.net/gh/codetheworld-io/static-files/ja-med.otf");
+}
 
 .center {
     height: 100%;
@@ -280,41 +226,32 @@ header {
     height: 65%;
     display: grid;
     font-family: "ja-med",sans-serif;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* Equal-width columns */
     gap: 10px;
     transition: all 400ms;
 }
 
-.container a {
-    display: block;
-    text-decoration: none; /*removes link underline*/
-}
-
-
 .box {
-    position: relative;
     background: var(--img) center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    transition: all 400ms;
+    background-size: cover; /*fit image to the box*/
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Horizontally center content */
     border: 1px solid #fff;
     border-radius: 5px;
     height: 100%;
 }
 
-
-
+/* When the container is hovered, all boxes turn grayscale*/
 .container:hover .box {
-    filter: grayscale(90%) opacity(100%);
+    filter: grayscale(90%);
 }
 
+/* When an individual box is hovered, it restores color */
 .container .box:hover {
-    filter: grayscale(0%) opacity(100%);
+    filter: grayscale(0%);
 }
 
-/*enlarge pic when hovered while others shrink*/
+/* Enlarging a hovered box while others shrink */
 .container {
     --layout-1: 3fr 1fr 1fr 1fr 1fr;
     --layout-2: 1fr 3fr 1fr 1fr 1fr;
@@ -343,20 +280,20 @@ header {
     }
 }
 
-/*make odd pic up while even pic down*/
+/* Adjust the vertical position of boxes based on their order */
 .box {
     &:nth-child(odd) {
-        transform: translateY(-16px);
+        transform: translateY(-16px); /* Move odd boxes slightly upward */
     }
 
     &:nth-child(even) {
-        transform: translateY(16px);
+        transform: translateY(16px); /* Move even boxes slightly downward */
     }
 }
 
 /*text style*/
 .box::after{
-    content:attr(data-text);
+    content:attr(data-text); /* Display the text stored in the "data-text" attribute */
     position: absolute;
     font-size: 1.5vw;
     color: #fff;
@@ -365,28 +302,25 @@ header {
     padding: 10px 10px 10px 14px;
     letter-spacing: 4px;
     transition: all 400ms;
-    transform: translateY(60px);
-    opacity: 0;
+    transform: translateY(60px); /* Start slightly below the box */
+    opacity: 0; /* Initially hidden */
 }
 
 /*appearing text when hover*/
 .box:hover::after {
-    transform: translateY(0);
-    opacity: 1;
+    transform: translateY(0); /* Move the text into view */
+    opacity: 1; /* Make the text fully visible */
     transition-delay: 200ms;
 }
 
-
 /*page2 tierlist*/
-
 .tier-list {
     margin: 3vh auto; /*margin top and bot 30px while centralise the table*/
     width: 70vw;
     background-color: rgba(26, 26, 23, 0.8);
     border: 3px solid #000;
-    display: flex;
-    flex-direction: column;
-    overflow-y: auto;
+    flex-direction: column; /* Arrange child elements in a column */
+    overflow-y: auto; /* Enable vertical scrolling for mobile view*/
     height: 64.5vh;
 }
 
@@ -407,7 +341,7 @@ header {
 /* Tier Label Styling */
 .tier-label {
     width: 8vw;
-    flex-shrink: 0;
+    flex-shrink: 0; /* Prevent the label from shrinking */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -441,7 +375,7 @@ header {
 /* Hero Icons Container */
 .hero-icons {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row wrap; /*move icon to next row when width is not long enough*/
 }
 
 /* Individual Hero Icon Styling */
@@ -449,7 +383,7 @@ header {
     width: 100px;
     height: 100px;
     border-radius: 50%; /*rounded border*/
-    border: 2px solid transparent; /*prevent images moving around*/
+    border: 2px solid transparent; /*prevent images moving around when hovered*/
     transition: transform 0.3s, border-color 0.3s;
 }
 
@@ -464,10 +398,10 @@ header {
     top: 8.5vh; /* Positions it below the header */
     margin: 5vh 3vw;
     font-family: "Mulish";
-    font-size: 1vw; /* Small font size */
+    font-size: 1vw;
     background-color: rgba(8, 20, 37, 0.8);
-    border: 2px solid #fff; /* Border for the button */
-    border-radius: 5px; /* Rounded corners */
+    border: 2px solid #fff;
+    border-radius: 5px;
     padding: 1vh 1vw; /* Adds padding inside the button */
 }
 
@@ -477,7 +411,7 @@ header {
 }
 
 .back-button:hover {
-    background-color: #444;
+    background-color: #444; /*show that it is clickable*/
 }
 
 @media (max-width: 768px) /*prevent button from getting too small when in vertical/mobile mode*/
@@ -488,16 +422,12 @@ header {
 }
 
 /*page3 heroskills*/
-
-/* Container for the vertical boxes */
 .skill-box-container {
     display: flex;
     gap: 20px; /* Space between each skill box */
-    margin: 0 auto; /* Center the container horizontally */
-    flex-direction: row;
     margin-top: 5vh;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center; /*align horizontally*/
     overflow-y: auto;
     height: 68vh;
 }
@@ -510,14 +440,14 @@ header {
 .skill-box {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Align image and text vertically */
-    background-color: rgba(15, 37, 70, 0.8); /* Box background color */
+    align-items: center;
+    background-color: rgba(15, 37, 70, 0.8);
     padding: 20px;
-    border: 2px solid #fff; /* Optional border */
+    border: 2px solid #fff;
     border-radius: 10px; /* Rounded corners */
     gap: 15px; /* Space between image and text */
     width: 260px;
-    height: fit-content;
+    height: fit-content; /* Adjust height automatically based on content */
 }
 
 /* Skill description */
